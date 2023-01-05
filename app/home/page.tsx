@@ -1,6 +1,6 @@
 "use client";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import domain from "@/utils/domain";
+import domain from "@/utils/request/domain";
 import { Button, Badge, Space, TabBar, Swiper, SafeArea } from "antd-mobile";
 import {
   AntOutline,

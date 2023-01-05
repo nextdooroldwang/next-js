@@ -8,7 +8,7 @@ export const useReuestToGetProfile = (): ResponseModel<string> => {
       fetcher({
         uri: `/get-test`,
         method: "GET",
-      }).then((response) => response.json()),
+      }),
     {
       debounceWait: 500,
       cacheKey: "get-test",

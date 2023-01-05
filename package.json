@@ -18,6 +18,7 @@
     "@types/react-dom": "18.0.9",
     "ahooks": "^3.7.4",
     "antd-mobile": "^5.27.0",
+    "axios": "^1.2.2",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.7",
     "js-cookie": "^3.0.1",

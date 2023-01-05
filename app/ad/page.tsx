@@ -2,7 +2,7 @@
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { Grid } from "antd-mobile";
-import { fallback } from "@/utils/util/fallback";
+import { fallback } from "@/utils/tools/fallback";
 import { useReuestToGetProfile } from "@/hooks/request/test";
 
 export default function AdPage() {

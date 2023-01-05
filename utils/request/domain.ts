@@ -1,7 +1,8 @@
 const domain = (env?: string) => {
   switch (env) {
     case "local":
-      return "https://mock.apifox.cn/m1/2092172-0-default/api";
+      return "https://dev-cha-api.o2o-marketing.com/app";
+    // return "https://mock.apifox.cn/m1/2092172-0-default/api";
     case "dev":
       return "https://dev.com/api";
     case "prod":
