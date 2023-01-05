@@ -33,6 +33,18 @@ const nextConfig = {
     // concurrentFeatures: true,
     // serverComponents: true,
   },
+  images: {
+    // dangerouslyAllowSVG: true,
+    // contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.s3.ap-northeast-1.amazonaws.com",
+        port: "",
+        pathname: "/chat_sys/**",
+      },
+    ],
+  },
   i18n: {
     locales: ["ja-JP", "en-US"],
     defaultLocale: "ja-JP",

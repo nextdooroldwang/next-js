@@ -10,6 +10,7 @@ import {
   MessageOutline,
   UserOutline,
 } from "antd-mobile-icons";
+import Link from "next/link";
 
 interface PageProps {
   searchParams?: {
@@ -62,23 +63,24 @@ export default function HomePage({ searchParams }: PageProps) {
 
   return (
     <div>
-      <div style={{ background: "#ace0ff" }}>
+      {/* <div style={{ background: "#ace0ff" }}>
         <SafeArea position="top" />
-      </div>
+      </div> */}
       <Swiper loop autoplay defaultIndex={3}>
         {items}
       </Swiper>
       {domain}
-      <div className="text-3xl font-bold underline">
+      <Link className="text-3xl font-bold text-[#fb923c]" href="/ad">
         {searchParams?.title}-{searchParams?.data}
-      </div>
+      </Link>
+
       <Button>
         <Space className="items-center">
           <AntOutline className="text-[#fb923c]" />
           <span className="text-[#fb923c]">dddd</span>
         </Space>
       </Button>
-      <TabBar>
+      <TabBar className="fixed left-0 right-0 bottom-0">
         {tabs.map((item) => (
           <TabBar.Item
             key={item.key}
@@ -88,9 +90,9 @@ export default function HomePage({ searchParams }: PageProps) {
           />
         ))}
       </TabBar>
-      <div style={{ background: "#ffcfac" }}>
+      {/* <div style={{ background: "#ffcfac" }}>
         <SafeArea position="bottom" />
-      </div>
+      </div> */}
     </div>
   );
 }
