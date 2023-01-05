@@ -8,7 +8,7 @@
     "start:prod": "NEXT_PUBLIC_DOMAIN_ENV=prod next dev",
     "build": "NEXT_PUBLIC_DOMAIN_ENV=prod next build",
     "build:dev": "NEXT_PUBLIC_DOMAIN_ENV=dev next build",
-    "start:build": "next start",
+    "start:build": "next start -p 4444",
     "lint": "next lint"
   },
   "dependencies": {

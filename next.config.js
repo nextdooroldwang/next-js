@@ -24,7 +24,6 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
-  distDir: "dist",
   reactStrictMode: true,
   swcMinify: true,
   styledComponents: true,
