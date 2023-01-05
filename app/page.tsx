@@ -1,6 +1,5 @@
-import fetcher from "@/utils/request";
-import { NextWebVitalsMetric } from "next/app";
 import "server-only";
+import fetcher from "@/utils/request";
 
 import HomePage from "./home/page";
 
@@ -11,7 +10,7 @@ async function getPosts() {
   const data = await res.json();
 
   // const posts = await res.json();
-  return { id: 1, title: "wss", data: data.statusCode };
+  return { id: 1, title: "fffwss", data: data.statusCode };
 }
 
 export default async function Page() {

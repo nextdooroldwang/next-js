@@ -1,6 +1,10 @@
-import "../styles/globals.css";
 import "antd-mobile/es/global";
 import { Providers } from "./provider";
+
+import "../styles/globals.css";
+import { Azeret_Mono } from "@next/font/google";
+
+const inter = Azeret_Mono({ variable: "--font-momo" });
 
 export default function RootLayout({
   children,
@@ -8,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={inter.variable}>
       <body>
         <Providers>{children}</Providers>
       </body>
