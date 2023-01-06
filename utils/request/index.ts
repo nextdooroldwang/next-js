@@ -38,16 +38,7 @@ export default function fetcher(
       const res = response.clone();
 
       if (res.ok) {
-        switch (res.type.toUpperCase()) {
-          case "JSON":
-            return res.json();
-          case "TEXT":
-            return res.text();
-          case "BLOB":
-            return res.blob();
-          case "ARRAYBUFFER":
-            return res.arrayBuffer();
-        }
+        return res.json();
       }
       return Promise.reject({
         code: "STATUS ERROR",
@@ -58,15 +49,10 @@ export default function fetcher(
     .catch((err) => {
       if (err?.code === "STATUS ERROR") {
         console.log(` Status Error ======> 「${domain}${uri}」`);
-        // @1 状态码错误
         switch (err.status) {
           case 401:
             break;
           case 403:
-            // ...
-            break;
-          case 404:
-            // ...
             break;
         }
       } else if (!navigator.onLine) {
@@ -78,6 +64,7 @@ export default function fetcher(
       return Promise.reject(err);
     })
     .finally(() => {
+      console.log(` Request Finally ======> 「${id}」`);
       clearTimeout(id);
     });
 }
