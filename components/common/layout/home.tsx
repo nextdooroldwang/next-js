@@ -54,7 +54,7 @@ export default function HomeLayoutComponent({
     <section>
       {children}
       <TabBar
-        className="fixed left-0 right-0 bottom-0"
+        className="fixed left-0 right-0 bottom-0 bg-white border-t"
         activeKey={pathname}
         onChange={(value) => router.push(`/home/${value}`)}
       >
