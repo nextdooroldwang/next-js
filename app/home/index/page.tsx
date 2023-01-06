@@ -1,7 +1,7 @@
 "use client";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import domain from "@/utils/request/domain";
-import { Button, Space, Swiper, SafeArea } from "antd-mobile";
+import { Button, Space, Swiper, SafeArea, Calendar } from "antd-mobile";
 import { AntOutline } from "antd-mobile-icons";
 import Link from "next/link";
 import HomeLayout from "../layout";
@@ -45,6 +45,7 @@ export default function HomePage({ searchParams }: PageProps) {
           <span className="text-[#fb923c]">dddd</span>
         </Space>
       </Button>
+      <Calendar />
     </div>
   );
 }

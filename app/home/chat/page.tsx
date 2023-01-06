@@ -3,7 +3,6 @@ import fetcher from "@/utils/request";
 
 async function getPosts() {
   const res = await fetcher("/test", { next: { revalidate: 30 } });
-  console.log(res);
 
   // const posts = await res.json();
   return { id: 1, title: "fffwss", data: res.statusCode };
@@ -14,5 +13,5 @@ export default async function Page() {
   const recentPosts = await getPosts();
   // Forward fetched data to your Client Component
 
-  return <div>chat</div>;
+  return <div>{recentPosts.data}</div>;
 }
