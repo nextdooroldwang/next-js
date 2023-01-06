@@ -45,17 +45,26 @@ const nextConfig = {
       },
     ],
   },
-  i18n: {
-    locales: ["ja-JP", "en-US"],
-    defaultLocale: "ja-JP",
-    localeDetection: false,
-  },
+  // i18n: {
+  //   locales: ["ja-JP", "en-US"],
+  //   defaultLocale: "ja-JP",
+  //   localeDetection: false,
+  // },
   async headers() {
     return [
       {
         // Apply these headers to all routes in your application.
         source: "/(.*)",
         headers: securityHeaders,
+      },
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/home/index",
+        permanent: true,
       },
     ];
   },

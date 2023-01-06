@@ -1,16 +1,10 @@
 "use client";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import domain from "@/utils/request/domain";
-import { Button, Badge, Space, TabBar, Swiper, SafeArea } from "antd-mobile";
-import {
-  AntOutline,
-  AppOutline,
-  UnorderedListOutline,
-  MessageFill,
-  MessageOutline,
-  UserOutline,
-} from "antd-mobile-icons";
+import { Button, Space, Swiper, SafeArea } from "antd-mobile";
+import { AntOutline } from "antd-mobile-icons";
 import Link from "next/link";
+import HomeLayout from "../layout";
 
 interface PageProps {
   searchParams?: {
@@ -19,32 +13,6 @@ interface PageProps {
     data?: number;
   };
 }
-
-const tabs = [
-  {
-    key: "home",
-    title: "首页",
-    icon: <AppOutline />,
-    badge: Badge.dot,
-  },
-  {
-    key: "todo",
-    title: "待办",
-    icon: <UnorderedListOutline />,
-    badge: "5",
-  },
-  {
-    key: "message",
-    title: "消息",
-    icon: (active: boolean) => (active ? <MessageFill /> : <MessageOutline />),
-    badge: "99+",
-  },
-  {
-    key: "personalCenter",
-    title: "我的",
-    icon: <UserOutline />,
-  },
-];
 
 const colors = ["#ace0ff", "#bcffbd", "#e4fabd", "#ffcfac"];
 
@@ -63,9 +31,6 @@ export default function HomePage({ searchParams }: PageProps) {
 
   return (
     <div>
-      {/* <div style={{ background: "#ace0ff" }}>
-        <SafeArea position="top" />
-      </div> */}
       <Swiper loop autoplay defaultIndex={3}>
         {items}
       </Swiper>
@@ -80,19 +45,6 @@ export default function HomePage({ searchParams }: PageProps) {
           <span className="text-[#fb923c]">dddd</span>
         </Space>
       </Button>
-      <TabBar className="fixed left-0 right-0 bottom-0">
-        {tabs.map((item) => (
-          <TabBar.Item
-            key={item.key}
-            icon={item.icon}
-            title={item.title}
-            badge={item.badge}
-          />
-        ))}
-      </TabBar>
-      {/* <div style={{ background: "#ffcfac" }}>
-        <SafeArea position="bottom" />
-      </div> */}
     </div>
   );
 }

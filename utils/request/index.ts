@@ -64,7 +64,6 @@ export default function fetcher(
       return Promise.reject(err);
     })
     .finally(() => {
-      console.log(` Request Finally ======> 「${id}」`);
       clearTimeout(id);
     });
 }
