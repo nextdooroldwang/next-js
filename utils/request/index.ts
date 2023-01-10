@@ -35,15 +35,15 @@ export default function fetcher(
     ),
   })
     .then((response) => {
-      const res = response.clone();
+      // const res = response.clone();
 
-      if (res.ok) {
-        return res.json();
+      if (response.ok) {
+        return response.json();
       }
       return Promise.reject({
         code: "STATUS ERROR",
-        status: res.status,
-        statusText: res.statusText,
+        status: response.status,
+        statusText: response.statusText,
       });
     })
     .catch((err) => {

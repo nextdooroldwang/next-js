@@ -13,5 +13,5 @@ export default async function Page() {
   const recentPosts = await getPosts();
   // Forward fetched data to your Client Component
 
-  return <div>{recentPosts.data}</div>;
+  return <div>chat</div>;
 }

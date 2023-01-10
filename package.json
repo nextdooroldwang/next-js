@@ -24,8 +24,8 @@
     "js-cookie": "^3.0.1",
     "moment": "^2.29.4",
     "next": "13.0.7",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.3.0-next-0b974418c-20230106",
+    "react-dom": "^18.3.0-next-0b974418c-20230106",
     "recoil": "^0.7.6",
     "server-only": "^0.0.1",
     "typescript": "4.9.4"

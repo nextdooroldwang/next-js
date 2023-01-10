@@ -1,5 +1,5 @@
-import HomePage from "./home/index/page";
-
+import "server-only";
+async function getPosts() {}
 export default async function Page() {
-  return <HomePage />;
+  return <div></div>;
 }
