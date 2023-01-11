@@ -1,5 +1,5 @@
 "use client";
-
+import "antd-mobile/es/global";
 import { Badge, TabBar } from "antd-mobile";
 import {
   AppOutline,

@@ -1,10 +1,12 @@
-"use client";
-import { SpinLoading } from "antd-mobile";
+import styles from "./loading.module.css";
 
 export default function LoadingComponent() {
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
-      <SpinLoading color="primary" />
+    <div className={styles["lds-ring"]}>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   );
 }

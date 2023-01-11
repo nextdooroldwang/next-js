@@ -4,6 +4,7 @@ import domain from "@/utils/request/domain";
 import { Button, Space, Swiper, SafeArea, Calendar } from "antd-mobile";
 import { AntOutline } from "antd-mobile-icons";
 import Link from "next/link";
+import React from "react";
 
 interface PageProps {
   searchParams?: {

@@ -1,4 +1,3 @@
-import { ErrorBlock } from "antd-mobile";
 import React, { Component, ErrorInfo, ReactNode } from "react";
 
 interface ErrorBoundaryProps {
@@ -31,9 +30,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     if (this.state.hasError) {
       // 你可以自定义降级后的 UI 并渲染
       return (
-        <div className="flex justify-center items-center">
-          <ErrorBlock fullPage status="default" title="" description="" />
-        </div>
+        <div className="flex justify-center items-center">Error Boundary</div>
       );
     }
 

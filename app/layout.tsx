@@ -1,5 +1,4 @@
-import "antd-mobile/es/global";
-import { Providers } from "./provider";
+import { Providers } from "../components/client/layout/provider";
 
 import "../styles/globals.css";
 import { Azeret_Mono } from "@next/font/google";

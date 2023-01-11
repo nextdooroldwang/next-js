@@ -1,8 +1,7 @@
-import HomeLayoutComponent from "@/components/common/layout/home";
+import "server-only";
+import HomeLayoutComponent from "@/components/client/layout/home";
 
-async function getPosts() {}
-
-export default async function HomeLayout({
+export default function HomeLayout({
   children,
 }: {
   children: React.ReactNode;

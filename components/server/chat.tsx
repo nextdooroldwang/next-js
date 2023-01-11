@@ -9,10 +9,8 @@ async function getPosts() {
   return { id: 1, title: "fffwss", data: res.statusCode };
 }
 
-export default async function Page() {
-  // Fetch data directly in a Server Component
+export default async function ChatServerComponent() {
   const recentPosts = await getPosts();
-  // Forward fetched data to your Client Component
 
-  return <div>consult</div>;
+  return <div>chat---{recentPosts.data}</div>;
 }
