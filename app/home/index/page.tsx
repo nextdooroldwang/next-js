@@ -1,3 +1,4 @@
+"use client";
 import HomeIndexComponent from "@/components/client/home";
 
 export default function HomeIndexPage() {

@@ -23,7 +23,6 @@ export default async function AdPage({ params: { username = "" } }) {
 
   // Wait for the promises to resolve
   const [artist, albums] = await Promise.all([artistData, albumsData]);
-  console.log(albums);
 
-  return <div>ad</div>;
+  return <div>{albums.data}</div>;
 }
