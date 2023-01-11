@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
+
+const withPWA = require("next-pwa")({
+  dest: "public",
+});
+
 const securityHeaders = [
   {
     key: "X-DNS-Prefetch-Control",
@@ -23,7 +28,7 @@ const securityHeaders = [
   // }
 ];
 
-const nextConfig = {
+const nextConfig = withPWA({
   reactStrictMode: true,
   swcMinify: true,
   styledComponents: true,
@@ -68,6 +73,6 @@ const nextConfig = {
       },
     ];
   },
-};
+});
 
 module.exports = nextConfig;
